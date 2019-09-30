@@ -1,6 +1,6 @@
 Name:           qogir-theme
 Version:        2019.09
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Qogir is a flat Design theme for GTK
 
 License:        GPLv2
@@ -26,7 +26,7 @@ Qogir is a flat Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK
 # Nothing to build
 %install
 %{__install} -d -m755 %{buildroot}%{_datadir}/themes/
-for file in Qogir  Qogir-dark  Qogir-light  Qogir-win  Qogir-win-dark  Qogir-win-light ; do
+for file in Qogir Qogir-dark Qogir-light Qogir-manjaro Qogir-manjaro-dark Qogir-manjaro-light Qogir-manjaro-win Qogir-manjaro-win-dark Qogir-manjaro-win-light Qogir-ubuntu Qogir-ubuntu-dark Qogir-ubuntu-light Qogir-ubuntu-win Qogir-ubuntu-win-dark Qogir-ubuntu-win-light Qogir-win Qogir-win-dark Qogir-win-light ; do
   %{__cp} -pr ${file} %{buildroot}%{_datadir}/themes
 done
 
@@ -36,11 +36,27 @@ done
 %{_datadir}/themes/Qogir
 %{_datadir}/themes/Qogir-dark
 %{_datadir}/themes/Qogir-light
+%{_datadir}/themes/Qogir-manjaro
+%{_datadir}/themes/Qogir-manjaro-dark
+%{_datadir}/themes/Qogir-manjaro-light
+%{_datadir}/themes/Qogir-manjaro-win
+%{_datadir}/themes/Qogir-manjaro-win-dark
+%{_datadir}/themes/Qogir-manjaro-win-light
+%{_datadir}/themes/Qogir-ubuntu
+%{_datadir}/themes/Qogir-ubuntu-dark
+%{_datadir}/themes/Qogir-ubuntu-light
+%{_datadir}/themes/Qogir-ubuntu-win
+%{_datadir}/themes/Qogir-ubuntu-win-dark
+%{_datadir}/themes/Qogir-ubuntu-win-light
 %{_datadir}/themes/Qogir-win
 %{_datadir}/themes/Qogir-win-dark
 %{_datadir}/themes/Qogir-win-light
 
 
 %changelog
+* Mon Sep 30 2019 Milan Zink <zeten30@gmail.com> - 2019.09.2
+- gnome-shell-theme.gresource added
+- new color variants
+
 * Thu Sep 26 2019 Milan Zink <zeten30@gmail.com> - 2019.09.1
 - initial release

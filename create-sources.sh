@@ -2,6 +2,12 @@
 
 WDIR=$(pwd)
 
+XML_HEADER='<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/shell/theme">'
+XML_FOOT='  </gresource>
+</gresources>'
+
 # Clean old sources
 mkdir -p sources/
 rm -rf sources/*
@@ -30,9 +36,12 @@ for themedir in qogir-theme/Qogir*/gnome-shell; do
   echo "Patching $(pwd)"
   sed -i 's/font-size: 9pt;/font-size: 10.5pt;/g' gnome-shell.css
   sed -i 's/font-family: Futura Bk bt, Cantarell, Sans-Serif;/font-family: Noto Sans, Cantarell, Sans-Serif;/g' gnome-shell.css
-  # TODO
   # generate: gnome-shell-theme.gresource.xml
-  # compile: glib-compile-resources gnome-shell-theme.gresource.xml
+  echo -e "${XML_HEADER}" > gnome-shell-theme.gresource.xml
+  find . -type f | sed -e 's/\.\//    <file>/' -e 's/$/<\/file>/' >> gnome-shell-theme.gresource.xml
+  echo -e "${XML_FOOT}" >> gnome-shell-theme.gresource.xml
+  # compile\
+  glib-compile-resources gnome-shell-theme.gresource.xml
   cd ../../../ || exit 1
 done
 
