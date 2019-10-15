@@ -1,5 +1,5 @@
 Name:           qogir-theme
-Version:        2019.09
+Version:        2019.10
 Release:        2%{?dist}
 Summary:        Qogir is a flat Design theme for GTK
 
@@ -54,6 +54,9 @@ done
 
 
 %changelog
+* Tue Oct 15 2019 Milan Zink <zeten30@gmail.com> - 2019.10.2
+- latest fixes for gnome-shell
+
 * Mon Sep 30 2019 Milan Zink <zeten30@gmail.com> - 2019.09.2
 - gnome-shell-theme.gresource added
 - new color variants
