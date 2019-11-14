@@ -37,6 +37,9 @@ for themedir in qogir-theme/Qogir*/gnome-shell; do
   sed -i 's/font-size: 9pt;/font-size: 10.5pt;/g' gnome-shell.css
   sed -i 's/font-family: Futura Bk bt, Cantarell, Sans-Serif;/font-family: Noto Sans, Cantarell, Sans-Serif;/g' gnome-shell.css
 
+  # Patch gnome-shell background
+  cp -rf "${WDIR}/assets-patch/background.jpeg" background.jpeg
+
   # Patch - https://gitlab.gnome.org/GNOME/gnome-shell/commit/a78527050ada988f30f00adaf8a9a395b381b8a1?merge_request_iid=110
   awk '/#searchResultsBin {/,/}/ { next } 1' gnome-shell.css > gnome-shell-patched.css
   sed -i 's/#searchResultsContent {/#searchResultsContent {\n  max-width: 1000px;/' gnome-shell-patched.css
