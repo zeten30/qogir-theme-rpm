@@ -1,6 +1,6 @@
 Name:           qogir-theme
-Version:        2020.02
-Release:        1%{?dist}
+Version:        2020.03
+Release:        2%{?dist}
 Summary:        Qogir is a flat Design theme for GTK
 
 License:        GPLv2
@@ -10,9 +10,9 @@ Source0:        qogir-theme.tar.gz
 BuildArch:      noarch
 BuildRequires:  bash
 BuildRequires:  bc
-Requires:       %{_bindir}/glib-compile-resources
-Requires:       %{_datadir}/gtk-engines/murrine.xml
-Requires:       gnome-themes-extra
+BuildRequires:  %{_bindir}/glib-compile-resources
+Requires:       gtk-murrine-engine
+Requires:       gtk2-engines
 
 %description
 Qogir is a flat Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Cinnamon Pantheon, XFCE, Mate, etc.
