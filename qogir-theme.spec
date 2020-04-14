@@ -1,6 +1,6 @@
 Name:           qogir-theme
-Version:        2020.03
-Release:        2%{?dist}
+Version:        2020.04
+Release:        1%{?dist}
 Summary:        Qogir is a flat Design theme for GTK
 
 License:        GPLv2
