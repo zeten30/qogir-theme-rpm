@@ -1,5 +1,5 @@
 Name:           qogir-theme
-Version:        2020.04
+Version:        2020.06
 Release:        1%{?dist}
 Summary:        Qogir is a flat Design theme for GTK
 
