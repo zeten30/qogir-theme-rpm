@@ -54,7 +54,7 @@ done
 
 
 %changelog
-* Wed May 18 2021 Milan Zink <zeten30@gmail.com> - 2021.08.1
+* Wed Aug 18 2021 Milan Zink <zeten30@gmail.com> - 2021.08.1
 - fedora logo in nautilus
 - sync latest upstream version
 
