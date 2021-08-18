@@ -25,7 +25,27 @@ git clone https://github.com/vinceliuice/Qogir-theme.git
 
 # Install to sources
 cd Qogir-theme || exit 1
+# Default color + light & dark + win
 ./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -c light
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -c dark
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -w square
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -c light -w square
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -c dark -w square
+# Manjaro colors + light & dark
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t manjaro
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t manjaro -c light
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t manjaro -c dark
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t manjaro -w square
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t manjaro -c light -w square
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t manjaro -c dark -w square
+# Ubuntu color + light & dark
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t ubuntu
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t ubuntu -c light
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t ubuntu -c dark
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t ubuntu -w square
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t ubuntu -c light -w square
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora -t ubuntu -c dark -w square
 
 # Modify sources
 cd ../../sources || exit 1

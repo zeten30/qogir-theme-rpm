@@ -57,6 +57,7 @@ done
 * Wed Aug 18 2021 Milan Zink <zeten30@gmail.com> - 2021.08.1
 - fedora logo in nautilus
 - sync latest upstream version
+- adapt to a new install.sh script
 
 * Wed May 05 2021 Milan Zink <zeten30@gmail.com> - 2021.05.1
 - include latest patches from upstream, remove local patches
