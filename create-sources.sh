@@ -25,7 +25,7 @@ git clone https://github.com/vinceliuice/Qogir-theme.git
 
 # Install to sources
 cd Qogir-theme || exit 1
-./install.sh --dest "${WDIR}/sources/qogir-theme"
+./install.sh --dest "${WDIR}/sources/qogir-theme" --logo fedora
 
 # Modify sources
 cd ../../sources || exit 1
