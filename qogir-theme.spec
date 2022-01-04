@@ -26,7 +26,7 @@ Qogir is a flat Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK
 # Nothing to build
 %install
 %{__install} -d -m755 %{buildroot}%{_datadir}/themes/
-for file in Qogir Qogir-dark Qogir-light Qogir-manjaro Qogir-manjaro-dark Qogir-manjaro-light Qogir-manjaro-win Qogir-manjaro-win-dark Qogir-manjaro-win-light Qogir-ubuntu Qogir-ubuntu-dark Qogir-ubuntu-light Qogir-ubuntu-win Qogir-ubuntu-win-dark Qogir-ubuntu-win-light Qogir-win Qogir-win-dark Qogir-win-light ; do
+for file in Qogir Qogir-dark Qogir-light Qogir-manjaro Qogir-manjaro-dark Qogir-manjaro-light Qogir-ubuntu Qogir-ubuntu-dark Qogir-ubuntu-light; do
   %{__cp} -pr ${file} %{buildroot}%{_datadir}/themes
 done
 
@@ -39,21 +39,15 @@ done
 %{_datadir}/themes/Qogir-manjaro
 %{_datadir}/themes/Qogir-manjaro-dark
 %{_datadir}/themes/Qogir-manjaro-light
-%{_datadir}/themes/Qogir-manjaro-win
-%{_datadir}/themes/Qogir-manjaro-win-dark
-%{_datadir}/themes/Qogir-manjaro-win-light
 %{_datadir}/themes/Qogir-ubuntu
 %{_datadir}/themes/Qogir-ubuntu-dark
 %{_datadir}/themes/Qogir-ubuntu-light
-%{_datadir}/themes/Qogir-ubuntu-win
-%{_datadir}/themes/Qogir-ubuntu-win-dark
-%{_datadir}/themes/Qogir-ubuntu-win-light
-%{_datadir}/themes/Qogir-win
-%{_datadir}/themes/Qogir-win-dark
-%{_datadir}/themes/Qogir-win-light
 
 
 %changelog
+* Tue Jan 04 2022 Milan Zink <zeten30@gmail.com> - 2022.01.1
+- adapt upstream changes
+
 * Wed Aug 18 2021 Milan Zink <zeten30@gmail.com> - 2021.08.1
 - fedora logo in nautilus
 - sync latest upstream version
