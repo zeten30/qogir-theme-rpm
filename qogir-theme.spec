@@ -26,7 +26,23 @@ Qogir is a flat Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK
 # Nothing to build
 %install
 %{__install} -d -m755 %{buildroot}%{_datadir}/themes/
-for file in Qogir Qogir-dark Qogir-light Qogir-manjaro Qogir-manjaro-dark Qogir-manjaro-light Qogir-ubuntu Qogir-ubuntu-dark Qogir-ubuntu-light; do
+THEME_DIRS="Qogir
+Qogir-Dark
+Qogir-Dark-hdpi
+Qogir-Dark-xhdpi
+Qogir-hdpi
+Qogir-Light
+Qogir-Light-hdpi
+Qogir-Light-xhdpi
+Qogir-Manjaro
+Qogir-Manjaro-Dark
+Qogir-Manjaro-Light
+Qogir-Ubuntu
+Qogir-Ubuntu-Dark
+Qogir-Ubuntu-Light
+Qogir-xhdpi"
+for file in ${THEME_DIRS}
+do
   %{__cp} -pr ${file} %{buildroot}%{_datadir}/themes
 done
 
@@ -34,17 +50,26 @@ done
 %files
 %defattr(-,root,root)
 %{_datadir}/themes/Qogir
-%{_datadir}/themes/Qogir-dark
-%{_datadir}/themes/Qogir-light
-%{_datadir}/themes/Qogir-manjaro
-%{_datadir}/themes/Qogir-manjaro-dark
-%{_datadir}/themes/Qogir-manjaro-light
-%{_datadir}/themes/Qogir-ubuntu
-%{_datadir}/themes/Qogir-ubuntu-dark
-%{_datadir}/themes/Qogir-ubuntu-light
+%{_datadir}/themes/Qogir-Dark
+%{_datadir}/themes/Qogir-Dark-hdpi
+%{_datadir}/themes/Qogir-Dark-xhdpi
+%{_datadir}/themes/Qogir-hdpi
+%{_datadir}/themes/Qogir-Light
+%{_datadir}/themes/Qogir-Light-hdpi
+%{_datadir}/themes/Qogir-Light-xhdpi
+%{_datadir}/themes/Qogir-Manjaro
+%{_datadir}/themes/Qogir-Manjaro-Dark
+%{_datadir}/themes/Qogir-Manjaro-Light
+%{_datadir}/themes/Qogir-Ubuntu
+%{_datadir}/themes/Qogir-Ubuntu-Dark
+%{_datadir}/themes/Qogir-Ubuntu-Light
+%{_datadir}/themes/Qogir-xhdpi
 
 
 %changelog
+* Wed May 25 2022 Milan Zink <zeten30@gmail.com> - 2022.05.1
+- adapt upstream changes
+
 * Tue Jan 04 2022 Milan Zink <zeten30@gmail.com> - 2022.01.1
 - adapt upstream changes
 
